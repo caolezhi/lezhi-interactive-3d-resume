@@ -1,6 +1,5 @@
 import { Suspense, useEffect, useState } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { Environment } from '@react-three/drei'
 import * as THREE from 'three'
 import Avatar from './Avatar'
 
@@ -39,7 +38,6 @@ export default function Scene() {
     <directionalLight position={[3, 2, -2]} intensity={2.4} color="#9bbbf5" />
     <Suspense fallback={null}>
       <Avatar />
-      <Environment preset="city" />
     </Suspense>
     <CameraMotion />
   </Canvas>
